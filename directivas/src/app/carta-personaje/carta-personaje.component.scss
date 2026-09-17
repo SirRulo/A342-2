@@ -1,0 +1,85 @@
+.carta-personaje {
+  width: 100%;
+  max-width: 380px;
+  min-width: 220px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(240, 245, 252, 0.94) 100%),
+    radial-gradient(circle at 85% 18%, rgba(180, 205, 238, 0.45), transparent 45%);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.14);
+  margin: 0.4rem auto;
+  padding: 1.35rem 1rem 1.1rem;
+  border: 1px solid #d5e0ec;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.carta-personaje:hover {
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
+  transform: translateY(-2px);
+}
+
+.carta-personaje img {
+  width: 138px;
+  height: 138px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.9rem;
+  box-shadow: 0 8px 16px rgba(21, 35, 54, 0.2);
+  border: 4px solid #ffffff;
+}
+
+.carta-personaje :is(h2, h3, h4) {
+  margin: 0 0 0.4rem;
+  font-weight: 700;
+  color: #1e334f;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.carta-personaje p {
+  margin: 0 0 0.45rem;
+  color: #334155;
+  font-size: 0.96rem;
+  text-align: center;
+}
+
+.carta-personaje .casa {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #47607f;
+  margin-bottom: 0.55rem;
+}
+
+.carta-personaje button {
+  background: linear-gradient(135deg, #1f3654 0%, #2c4c71 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0.55rem;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.carta-personaje button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+@media (max-width: 920px) {
+  .carta-personaje {
+    max-width: 100%;
+    min-height: 220px;
+  }
+
+  .carta-personaje img {
+    width: 120px;
+    height: 120px;
+  }
+}

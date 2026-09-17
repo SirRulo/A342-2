@@ -1,0 +1,115 @@
+:host {
+    display: block;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+button {
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #1f3654 0%, #2c4c71 100%);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    box-shadow: 0 6px 14px rgba(31, 54, 84, 0.22);
+}
+
+button:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+    box-shadow: 0 8px 18px rgba(31, 54, 84, 0.28);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1rem 0 0;
+    font-size: 0.97rem;
+    background: #ffffff;
+    border: 1px solid #d6e0ea;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+thead tr {
+    background: linear-gradient(135deg, #182c46 0%, #1f3654 100%);
+    color: #ffffff;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 0.72rem 0.85rem;
+    border-bottom: 1px solid #e8eef5;
+    vertical-align: middle;
+    overflow-wrap: anywhere;
+}
+
+tbody tr {
+    transition: background-color 0.18s ease;
+}
+
+tbody tr:hover {
+    background-color: #f2f7fb;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+img {
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.2);
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.casa-lannister {
+    background-color: #ffe9a6;
+}
+
+.casa-stark {
+    background-color: #d9e1ea;
+}
+
+.casa-targaryen {
+    background-color: #f7cdcd;
+}
+
+.casa-baratheon {
+    background-color: #505050;
+    color: #ffffff;
+}
+
+.casa-greyjoy {
+    background-color: #e0dfc0;
+}
+
+.casa-tyrell {
+    background-color: #d8ebd8;
+}
+
+@media (max-width: 740px) {
+    table {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 0.42rem;
+    }
+
+    img {
+        width: 64px !important;
+    }
+}
+

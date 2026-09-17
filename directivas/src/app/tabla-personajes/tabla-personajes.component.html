@@ -1,0 +1,44 @@
+<button *appAdmin (click)="mostrar = !mostrar">Mostrar</button>
+
+<table *ngIf="mostrar">
+    <thead>
+        <title>Personajes de Got</title>
+        <tr>
+        <th>Nombre</th>
+        <th>Titulo</th>
+        <th>Casa</th>
+        <th>Foto</th>
+        <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <ng-container class="casa-lannister" *ngFor="let personaje of personajes()">
+            <tr 
+            [ngClass]="{
+                'casa-lannister': personaje.family === 'House Lannister',
+                'casa-stark': personaje.family === 'House Stark',
+                'casa-targaryen': personaje.family === 'House Targaryen',
+                'casa-baratheon': personaje.family === 'House Baratheon',
+                'casa-greyjoy': personaje.family === 'House Greyjoy',
+                'casa-tyrell': personaje.family === 'House Tyrell'
+            }">
+          <td>{{ personaje.fullName }} </td>
+          <td>{{ personaje.title }}</td>
+          <td>{{ personaje.family}}</td>
+          <td>
+              <img 
+              [style.width]="'auto'"
+              [style.height]="'auto'"
+              [style.width.px]="100"
+              [appHoverZoom]="1.5"
+              [src]="personaje.imageUrl" alt="{{ personaje.name }}" width="100">
+          </td>
+          <td>
+              <button  (click)="seleccionarPersonaje(personaje)">Seleccionar</button>
+          </td>
+        </tr>
+        </ng-container>
+    
+    </tbody>
+</table>
